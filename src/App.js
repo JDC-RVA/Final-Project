@@ -1,27 +1,37 @@
-import React from "react";
-import logo from "./logo.svg";
+import React, { Component } from "react";
 import "./App.css";
-import "typeface-roboto";
+import ProductCard from "./components/ProductCard";
+import Wrapper from "./components/Wrapper";
+import products from "./products.json";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. HELLO
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// function App() {
+//   return (
+//     <div className="App">
+//       <h1>HELLO</h1>
+//     </div>
+//   );
+// }
+
+class App extends Component {
+  state = {
+    products
+  };
+
+  // Map over this.state.products and render a ProductCard component for each product object
+  render() {
+    return (
+      <Wrapper>
+        {this.state.products.map(product => (
+          <ProductCard
+            id={product.id}
+            key={product.id}
+            name={product.name}
+            image={product.image}
+            price={product.price}
+          />
+        ))}
+      </Wrapper>
+    );
+  }
 }
-
 export default App;

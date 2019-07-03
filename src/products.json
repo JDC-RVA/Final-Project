@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Huawei Matebook X Pro",
+        "image": "/img/Huawei-MateBook-X-Pro.png",
+        "price": 1200
+    },
+    {
+        "id": 2,
+        "name": "Logitech G602 Wireless Mouse",
+        "image": "/img/Logitech G602.png",
+        "price": 39.99
+    },
+    {
+        "id": 3,
+        "name": "Apple Watch Series 3",
+        "image": "/img/apple watch.png",
+        "price": 299
+    },
+    {
+        "id": 4,
+        "name": "Apple iPhone 8 Plus",
+        "image": "/img/iPhone.png",
+        "price": 899
+    },
+    {
+        "id": 5,
+        "name": "Anker Soundcore Liberty Air",
+        "image": "/img/anker.png",
+        "price": 79.99
+    },
+    {
+        "id": 6,
+        "name": "Cole Haan Colton Chukka Boot",
+        "image": "/img/boots.png",
+        "price": 129.99
+    }
+]
