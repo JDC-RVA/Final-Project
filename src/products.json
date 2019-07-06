@@ -2,37 +2,61 @@
     {
         "id": 1,
         "name": "Huawei Matebook X Pro",
-        "image": "/img/Huawei-MateBook-X-Pro.png",
+        "image": [
+            "/img/Huawei-MateBook-X-Pro1.png",
+            "/img/Huawei-MateBook-X-Pro2.png",
+            "/img/Huawei-MateBook-X-Pro3.png"
+        ],
         "price": 1200
     },
     {
         "id": 2,
         "name": "Logitech G602 Wireless Mouse",
-        "image": "/img/Logitech G602.png",
+        "image": [
+            "/img/Logitech1.png",
+            "/img/Logitech2.png",
+            "/img/Logitech3.png"
+        ],
         "price": 39.99
     },
     {
         "id": 3,
         "name": "Apple Watch Series 3",
-        "image": "/img/apple watch.png",
+        "image": [
+            "/img/apple watch1.png",
+            "/img/apple watch2.png",
+            "/img/apple watch3.png"
+        ],
         "price": 299
     },
     {
         "id": 4,
         "name": "Apple iPhone 8 Plus",
-        "image": "/img/iPhone.png",
+        "image": [
+            "/img/iPhone1.png",
+            "/img/iPhone2.png",
+            "/img/iPhone3.png"
+        ],
         "price": 899
     },
     {
         "id": 5,
         "name": "Anker Soundcore Liberty Air",
-        "image": "/img/anker.png",
+        "image": [
+            "/img/anker1.png",
+            "/img/anker2.png",
+            "/img/anker3.png"
+        ],
         "price": 79.99
     },
     {
         "id": 6,
         "name": "Cole Haan Colton Chukka Boot",
-        "image": "/img/boots.png",
+        "image": [
+            "/img/boots1.png",
+            "/img/boots2.png",
+            "/img/boots3.png"
+        ],
         "price": 129.99
     }
 ]
