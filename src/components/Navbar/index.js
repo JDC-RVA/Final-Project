@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
+import { BrowserRouter as Link } from "react-router-dom";
 import "./style.css";
 
 const useStyles = makeStyles(theme => ({
@@ -35,9 +36,11 @@ export default function Navbar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" className={classes.title}>
-            News
-          </Typography>
+          <Link to={"/"}>
+            <Typography variant="h6" className={classes.title}>
+              REVMART
+            </Typography>
+          </Link>
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>

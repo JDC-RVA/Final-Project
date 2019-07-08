@@ -1,17 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
-import ProductCard from "./components/ProductCard";
-import Wrapper from "./components/Wrapper";
+import ProductContainer from "./components/ProductContainer";
 import products from "./products.json";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import "./App.css";
-// function App() {
-//   return (
-//     <div className="App">
-//       <h1>HELLO</h1>
-//     </div>
-//   );
-// }
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import ProductDetail from "./components/ProductDetail";
 
 class App extends Component {
   state = {
@@ -22,19 +17,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        {" "}
         <Navbar />
-        <Wrapper>
-          {this.state.products.map(product => (
-            <ProductCard
-              id={product.id}
-              key={product.id}
-              name={product.name}
-              image={product.image}
-              price={product.price}
-            />
-          ))}
-        </Wrapper>
+        <Router>
+          <div>
+            <Route exact path="/" component={ProductContainer} />
+            <Route exact path="/product/:id" component={ProductDetail} />
+          </div>
+
+          <Footer />
+        </Router>
       </div>
     );
   }

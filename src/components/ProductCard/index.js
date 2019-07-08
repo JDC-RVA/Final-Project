@@ -1,23 +1,26 @@
 import React from "react";
 import "./style.css";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function ProductCard(props) {
   return (
-    <div className="card" /*onClick={() => props.clickCount(props.id)}*/>
-      <div className="img-container">
-        <img alt={props.name} src={props.image[0]} />
+    <Link to={`/product/${props.id}`}>
+      <div className="card">
+        <div className="img-container">
+          <img alt={props.name} src={props.image[0]} />
+        </div>
+        <div className="content">
+          <ul>
+            <li>
+              <strong>{props.name}</strong>
+            </li>
+            <li>
+              <strong>$ {props.price}</strong>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div className="content">
-        <ul>
-          <li>
-            <strong>{props.name}</strong>
-          </li>
-          <li>
-            <strong>$ {props.price}</strong>
-          </li>
-        </ul>
-      </div>
-    </div>
+    </Link>
   );
 }
 
