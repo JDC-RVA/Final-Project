@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import products from "../../products.json";
 import ProductInfo from "../ProductInfo";
 import YoutubeHTTP from "../YoutubeHTTP";
-
+import YoutubeNode from "../YoutubeNode";
 class ProductDetail extends Component {
   render() {
     console.log(this.props);
@@ -22,6 +22,7 @@ class ProductDetail extends Component {
           price={product.price}
         />
         <YoutubeHTTP />
+        <YoutubeNode />
       </div>
     );
   }
