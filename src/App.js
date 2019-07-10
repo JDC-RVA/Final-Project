@@ -5,7 +5,7 @@ import products from "./products.json";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./App.css";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import ProductDetail from "./components/ProductDetail";
 
 class App extends Component {

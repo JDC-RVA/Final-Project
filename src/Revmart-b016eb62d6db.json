@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "revmart",
+  "private_key_id": "b016eb62d6db84ad3f9b0e9feee7b7a0801b60c0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCWb+19V1aIaGTn\nzOLLoe6HwCN5BVpM2AZQlvk5potD5iTj0GMSSWvQu3BAxfePPA56iUA3+5i8JOOo\nvX+yGCHzMVvrntrqlTBwzq+2GxSfm+KtHt5ddmIOzFYSUv95CtpbCq2xcEqcAxyD\nqOxzAEpGComGe53zA4brKXYwUZi4o0epSJ1A9p9n4A3FGF8+l0aH3RkFeVDUJTnf\nHZ+gOu6Tx2LOXOHxY55sLTBGeYFY2+Htet3eGB4ueQXkTA7bkU8JYYH/WyVCfsXK\n5udS0cStlH3jKzPpNkPJDsjDrxr4HMaDtmXuOTv4lwsAIKb5A3m+BhH0OE9i2Wji\nnlfKO9yLAgMBAAECggEAMLxnDG2wf3WOhxf1u3Gk9H6XH1xQEkgD17TpXbdqM5+K\nAPHgPqrhjlhC+AEKf/E9YY44a0qLgxxSUra9eUVfLkml1VH76vZVIJ6dBxqD1mdq\nippPAKlbAB9LnRkdYanV7puphKvzx9IsOS0PGPyVk1ZTkmlW1MUmPuYKP4IXv2zK\n9iU9A0iPpY4//4J8Z+ZxPcu0gpX8dKzbofX7v2TufZZom0vqo7/YrszRObGjHrU4\n35u8ASdB14QyD/tHSBDEON/iEE9D9kV2I1M10jem3cTd/XjZi2dMGq341aOR/4sk\nphtRC5LqyzMQdbN+1CbbxewqO4HVvMJbsRhzGTs5NQKBgQDOqLvm6EsScd1RygkW\n9o+WKa35K+JKt01XCaTXaT+sgKoje5ZXlBL7gxb9E4BQjcjtr20AGn3dyBNgsWOf\n/dBCqi1BFN1up6FD5i8h+HTepcp/95EY9ccXiVFZ6xoAxWsMEjhWAIcA03t9CyEY\nfomtcaKgtdiJxhOsmx3Pn01ZvwKBgQC6WtcbAjRZuJKZL3xz1ap7eX0zDdwHXV2T\nmANWx1zOHGNB2NAmsFA3FYNFuCmuq4PqD9SJiZD9zYTTQCSdfRgYKZhO0/zZ1jB5\n/gXAWyKIb0IU/pB9Op+9l06bFXfccaILjS7as6VDxU5YVXioAKNQKAw3VEH8n7UP\nehypsQm4NQKBgQDLcIgptBvTOIxra7yvAmIvrTA6ztyiOPjF6hSAinfIVZEoBQ3n\ngTl+p3oGASCcLDfU5JElPO8TWVbaJUaxxaczOVv7aZLiz9qNgRh9FJ3YYNWMTCZm\nr+0iWmffYPXkNHRBGd6jqzk7svUqD76w4kCeofM6ykk0t+2+SaV7MpNu+QKBgBxC\nPjA4S1v3ozNbghHGqs2ChLvDNERhohkJiigUnzwaDeskR5w2TFOuDXP7E0cLdzt9\nHwukMrpp+eRW67Z+C7NOS2xYtRULZ9p37MNYjooF5Q1t9NcolqSXVzIpNT3WdW4v\nAJXlfAAk4VZ/z4YaYql7CS8ytbbrOPeZ2tLYp9KpAoGAMTkDTqjM+bkbGRiEbxsy\n/TaApvjqh7L9R4x+fL2XitM1PtaSAMZAqdI3swSzNQv/TCJK83B9G22BsLtozJLL\nbe5+1sATy2+QXatatEq5ryhGOtDbFft+TErmwu1UMjdYmfJxITsVhhdaAkRnOAUn\njkSI8m3Wi8sq7cFeLsp50zY=\n-----END PRIVATE KEY-----\n",
+  "client_email": "revmart@revmart.iam.gserviceaccount.com",
+  "client_id": "102458010044067209688",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/revmart%40revmart.iam.gserviceaccount.com"
+}
