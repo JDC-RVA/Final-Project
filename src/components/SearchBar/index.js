@@ -18,11 +18,11 @@ class SearchBar extends Component {
               placeholder="Search videos"
               autoFocus
             />
-            <div className="input-group-append">
+            {/* <div className="input-group-append">
               <button className="btn btn-outline-secondary px-4">
                 <span className="oi oi-magnifying-glass" />
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

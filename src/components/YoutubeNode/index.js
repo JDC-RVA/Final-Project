@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import YTSearch from "youtube-api-search";
 import _ from "lodash";
 import SearchBar from "../SearchBar";
@@ -19,7 +19,7 @@ class YoutubeNode extends Component {
       seletedVideo: null
     };
 
-    this.videoSearch("Netflix");
+    this.videoSearch(props.name);
   }
 
   videoSearch(term) {

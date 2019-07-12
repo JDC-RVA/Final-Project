@@ -8,7 +8,11 @@ const VideoListItem = ({ video, onVideoSelect }) => {
     >
       <div className="video-list row">
         <div className="col-5 pr-2">
-          <img className="mw-100" src={video.snippet.thumbnails.medium.url} />
+          <img
+            className="mw-100"
+            src={video.snippet.thumbnails.medium.url}
+            alt="thumbnail"
+          />
         </div>
         <div className="col-7 pl-2">
           <h6 className="video-title font-weight-light">
