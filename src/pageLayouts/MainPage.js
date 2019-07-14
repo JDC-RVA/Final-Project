@@ -1,16 +1,15 @@
 import React, { Component } from "react";
-import "./App.css";
+
 import ProductContainer from "./components/ProductContainer";
 import products from "./products.json";
 
-import BootstrapNavbar from "./components/BootstrapNavbar";
+import BootstrapNavbar from "./BootstrapNavbar";
 import Footer from "./components/Footer";
-import "./App.css";
+
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import ProductDetail from "./components/ProductDetail";
-import Jumbotron from "./components/Jumbotron";
 
-class App extends Component {
+class MainPage extends Component {
   state = {
     products
   };
@@ -20,7 +19,6 @@ class App extends Component {
     return (
       <div>
         <BootstrapNavbar />
-        <Jumbotron />
         <Router>
           <div>
             <Route exact path="/" component={ProductContainer} />
@@ -33,4 +31,4 @@ class App extends Component {
     );
   }
 }
-export default App;
+export default MainPage;

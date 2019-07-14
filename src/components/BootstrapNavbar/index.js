@@ -33,9 +33,6 @@ export default class BootstrapNavbar extends React.Component {
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <Modal />
-                {/* <NavLink href="https://github.com/reactstrap/reactstrap">
-                  Login
-                </NavLink> */}
               </NavItem>
             </Nav>
           </Collapse>

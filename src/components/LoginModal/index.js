@@ -27,7 +27,11 @@ class LoginModal extends Component {
   render() {
     return (
       <Container>
-        <NavLink color="secondary" onClick={this.toggleModal.bind(this)}>
+        <NavLink
+          color="secondary"
+          href="#"
+          onClick={this.toggleModal.bind(this)}
+        >
           Login/Register
         </NavLink>
         <Modal isOpen={this.state.modalIsOpen}>
