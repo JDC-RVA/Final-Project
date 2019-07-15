@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import "./style.css";
 import products from "../../products.json";
 import ProductInfo from "../ProductInfo";
-// import YoutubeHTTP from "../YoutubeHTTP";
+
 import YoutubeNode from "../YoutubeNode";
 
 class ProductDetail extends Component {
