@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 import {
   Collapse,
   Navbar,
@@ -27,7 +28,9 @@ export default class BootstrapNavbar extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">RevMart</NavbarBrand>
+          <NavbarBrand href="/">
+            <img alt="logo" src="/img/revmart logo_transparent.png" />
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

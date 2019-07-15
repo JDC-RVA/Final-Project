@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import ProductDetail from "./components/ProductDetail";
-import Jumbotron from "./components/Jumbotron";
+import Banner from "./components/Banner";
 
 class App extends Component {
   state = {
@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <div>
         <BootstrapNavbar />
-        <Jumbotron />
+        <Banner />
         <Router>
           <div>
             <Route exact path="/" component={ProductContainer} />

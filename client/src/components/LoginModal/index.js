@@ -36,7 +36,9 @@ class LoginModal extends Component {
         </NavLink>
         <Modal isOpen={this.state.modalIsOpen}>
           <ModalHeader toggle={this.toggleModal.bind(this)}>
-            Modal Title
+            <div>
+              <img alt="logo" src="/img/revmart logo.png" />
+            </div>
           </ModalHeader>
           <ModalBody>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi rem
