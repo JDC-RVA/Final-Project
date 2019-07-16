@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import "./App.css";
-import ProductContainer from "./components/ProductContainer";
+import ProductContainer from "./pages/ProductContainer";
 import products from "./products.json";
 
 import BootstrapNavbar from "./components/BootstrapNavbar";
 import Footer from "./components/Footer";
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import ProductDetail from "./components/ProductDetail";
-import Banner from "./components/Banner";
+import ProductDetail from "./pages/ProductDetail";
 
 class App extends Component {
   state = {
@@ -20,7 +19,7 @@ class App extends Component {
     return (
       <div>
         <BootstrapNavbar />
-        <Banner />
+
         <Router>
           <div>
             <Route exact path="/" component={ProductContainer} />
