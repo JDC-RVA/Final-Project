@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 // import "./style.css";
 import products from "../../products.json";
-import ProductInfo from "../ProductInfo";
+import ProductInfo from "../../components/ProductInfo";
 
-import YoutubeNode from "../YoutubeNode";
+import YoutubeNode from "../../components/YoutubeNode";
 
 class ProductDetail extends Component {
   render() {
