@@ -6,7 +6,14 @@ import {
   ModalHeader,
   ModalBody,
   ModalFooter,
-  NavLink
+  NavLink,
+  Col,
+  Row,
+  Form,
+  FormGroup,
+  Label,
+  Input
+  // FormText
 } from "reactstrap";
 
 class LoginModal extends Component {
@@ -41,15 +48,87 @@ class LoginModal extends Component {
             </div>
           </ModalHeader>
           <ModalBody>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi rem
-            fugiat perspiciatis sint, nostrum labore nobis quidem sed impedit
-            quae quisquam corrupti, libero commodi a quod pariatur quo qui. Id?
+            <Row>
+              <p className="mx-auto">Welcome to REVMART!</p>
+            </Row>
+            <Row>
+              <p className="mx-auto">Please login or register as a new user.</p>
+            </Row>
+
+            <hr />
+            <Form>
+              <Row form>
+                <Col md={6}>
+                  <FormGroup>
+                    <Label for="exampleEmail">Username</Label>
+                    <Input
+                      type="email"
+                      name="email"
+                      id="exampleEmail"
+                      placeholder="Username"
+                    />
+                  </FormGroup>
+                </Col>
+                <Col md={6}>
+                  <FormGroup>
+                    <Label for="examplePassword">Password</Label>
+                    <Input
+                      type="password"
+                      name="password"
+                      id="examplePassword"
+                      placeholder="password"
+                    />
+                  </FormGroup>
+                </Col>
+              </Row>
+
+              <Button
+                className="form-control mt-2 btn btn-primary"
+                color="primary"
+              >
+                Sign In
+              </Button>
+            </Form>
+            <hr />
+            <Form>
+              <Row form>
+                <Col md={6}>
+                  <FormGroup>
+                    <Label for="exampleEmail">Username</Label>
+                    <Input
+                      type="email"
+                      name="email"
+                      id="exampleEmail"
+                      placeholder="Username"
+                    />
+                  </FormGroup>
+                </Col>
+                <Col md={6}>
+                  <FormGroup>
+                    <Label for="examplePassword">Password</Label>
+                    <Input
+                      type="password"
+                      name="password"
+                      id="examplePassword"
+                      placeholder="password"
+                    />
+                  </FormGroup>
+                </Col>
+              </Row>
+
+              <Button
+                className="form-control mt-2 btn btn-primary"
+                color="success"
+              >
+                Register
+              </Button>
+            </Form>
           </ModalBody>
+
           <ModalFooter>
-            <Button color="primary">Sign Up</Button>
-            <Button color="secondary" onClick={this.toggleModal.bind(this)}>
+            {/* <Button color="secondary" onClick={this.toggleModal.bind(this)}>
               Cancel
-            </Button>
+            </Button> */}
           </ModalFooter>
         </Modal>
       </Container>
