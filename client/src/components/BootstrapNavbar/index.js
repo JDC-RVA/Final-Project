@@ -17,7 +17,8 @@ export default class BootstrapNavbar extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
+      userName: []
     };
   }
   toggle() {
@@ -25,6 +26,18 @@ export default class BootstrapNavbar extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
+
+  componentWillMount() {
+    localStorage.getItem("username") &&
+      this.setState({
+        userName: JSON.parse(localStorage.getItem("username")),
+        isLoading: false
+      });
+  }
+  componentWillUpdate(nextProps, nextState) {
+    localStorage.setItem("username", JSON.stringify(nextState.userName));
+  }
+
   render() {
     return (
       <div>
