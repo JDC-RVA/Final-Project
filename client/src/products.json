@@ -24,9 +24,9 @@
         "id": 3,
         "name": "Apple Watch Series 3",
         "image": [
-            "/img/apple watch1.png",
-            "/img/apple watch2.png",
-            "/img/apple watch3.png"
+            "/img/apple-watch1.png",
+            "/img/apple-watch2.png",
+            "/img/apple-watch3.png"
         ],
         "price": 299
     },

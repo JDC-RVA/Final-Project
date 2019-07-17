@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import API from "../utils/API";
 import {
   Container,
   Button,
@@ -19,7 +20,9 @@ import {
 class LoginModal extends Component {
   state = {
     visible: true,
-    modalIsOpen: false
+    modalIsOpen: false,
+    userName: "",
+    password: ""
   };
   toggleAlert() {
     this.setState({
@@ -31,6 +34,34 @@ class LoginModal extends Component {
       modalIsOpen: !this.state.modalIsOpen
     });
   }
+
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  loadUsers = () => {
+    API.getUsers()
+      .then(res =>
+        this.setState({ users: res.data, userName: "", password: "" })
+      )
+      .catch(err => console.log(err));
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.userName && this.state.password) {
+      API.saveUser({
+        userName: this.state.userName,
+        password: this.state.password
+      })
+        .then(res => this.loadUsers())
+        .catch(err => console.log(err));
+    }
+  };
+
   render() {
     return (
       <Container>
@@ -44,7 +75,7 @@ class LoginModal extends Component {
         <Modal isOpen={this.state.modalIsOpen}>
           <ModalHeader toggle={this.toggleModal.bind(this)}>
             <div>
-              <img alt="logo" src="/img/revmart logo.png" />
+              <img alt="logo" src="/img/revmart-logo.png" />
             </div>
           </ModalHeader>
           <ModalBody>
@@ -62,8 +93,8 @@ class LoginModal extends Component {
                   <FormGroup>
                     <Label for="exampleEmail">Username</Label>
                     <Input
-                      type="email"
-                      name="email"
+                      type="username"
+                      name="userName"
                       id="exampleEmail"
                       placeholder="Username"
                     />
@@ -76,7 +107,7 @@ class LoginModal extends Component {
                       type="password"
                       name="password"
                       id="examplePassword"
-                      placeholder="password"
+                      placeholder="Password"
                     />
                   </FormGroup>
                 </Col>
@@ -96,9 +127,10 @@ class LoginModal extends Component {
                   <FormGroup>
                     <Label for="exampleEmail">Username</Label>
                     <Input
+                      value={this.state.userName}
+                      onChange={this.handleInputChange}
                       type="email"
-                      name="email"
-                      id="exampleEmail"
+                      name="userName"
                       placeholder="Username"
                     />
                   </FormGroup>
@@ -107,16 +139,19 @@ class LoginModal extends Component {
                   <FormGroup>
                     <Label for="examplePassword">Password</Label>
                     <Input
+                      value={this.state.password}
+                      onChange={this.handleInputChange}
                       type="password"
                       name="password"
-                      id="examplePassword"
-                      placeholder="password"
+                      placeholder="Password"
                     />
                   </FormGroup>
                 </Col>
               </Row>
 
               <Button
+                disabled={!(this.state.userName && this.state.password)}
+                onClick={this.handleFormSubmit}
                 className="form-control mt-2 btn btn-primary"
                 color="success"
               >

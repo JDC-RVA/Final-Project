@@ -29,7 +29,7 @@ export default class BootstrapNavbar extends React.Component {
       <div>
         <Navbar color="light" light expand="md">
           <NavbarBrand href="/">
-            <img alt="logo" src="/img/revmart logo_transparent.png" />
+            <img alt="logo" src="/img/revmart-logo_transparent.png" />
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>

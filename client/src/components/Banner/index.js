@@ -2,18 +2,18 @@ import React, { Component } from "react";
 import {
   Carousel,
   CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselCaption
+  // CarouselControl,
+  CarouselIndicators
+  // CarouselCaption
 } from "reactstrap";
 import "./style.css";
 const items = [
   {
-    src: "/img/revmart main.png ",
+    src: "/img/revmart-main.png ",
     altText: "Slide 1"
   },
   {
-    src: "/img/revmart description.png",
+    src: "/img/revmart-description.png",
     altText: "Slide 2"
   },
   {
@@ -75,10 +75,10 @@ class Banner extends Component {
           key={item.src}
         >
           <img src={item.src} alt={item.altText} />
-          <CarouselCaption
+          {/* <CarouselCaption
             captionText={item.caption}
             captionHeader={item.caption}
-          />
+          /> */}
         </CarouselItem>
       );
     });
