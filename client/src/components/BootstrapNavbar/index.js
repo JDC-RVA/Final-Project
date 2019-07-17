@@ -9,6 +9,7 @@ import {
   NavItem
 } from "reactstrap";
 import Modal from "../LoginModal";
+import Welcome from "../Welcome";
 
 export default class BootstrapNavbar extends React.Component {
   constructor(props) {
@@ -35,7 +36,11 @@ export default class BootstrapNavbar extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <Modal />
+                {this.state.userName ? (
+                  <Welcome userName={this.state.userName} />
+                ) : (
+                  <Modal />
+                )}
               </NavItem>
             </Nav>
           </Collapse>
