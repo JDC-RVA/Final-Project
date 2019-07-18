@@ -4,7 +4,7 @@ import React, { Component } from "react";
 // import ReactDOM from "react-dom";
 import YTSearch from "youtube-api-search";
 import _ from "lodash";
-import SearchBar from "../SearchBar";
+// import SearchBar from "../SearchBar";
 import VideoList from "../VideoList";
 import VideoDetail from "../VideoDetail";
 
@@ -37,7 +37,7 @@ class YoutubeNode extends Component {
     }, 300);
     return (
       <div className="container-fluid">
-        <SearchBar onSearchTermChange={throttledSearch} />
+        {/* <SearchBar onSearchTermChange={throttledSearch} /> */}
         <div className="row">
           <VideoDetail video={this.state.seletedVideo} />
           <VideoList
