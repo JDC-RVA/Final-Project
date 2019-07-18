@@ -10,6 +10,8 @@ import {
 } from "reactstrap";
 import Modal from "../LoginModal";
 import Welcome from "../Welcome";
+// eslint-disable-next-line
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export default class BootstrapNavbar extends React.Component {
   constructor(props) {
@@ -55,6 +57,11 @@ export default class BootstrapNavbar extends React.Component {
                   <Modal />
                 )}
               </NavItem>
+              <Router>
+                <Link to={"/cart"}>
+                  <i className="fas fa-shopping-cart fa-2x" id="cart" />
+                </Link>
+              </Router>
             </Nav>
           </Collapse>
         </Navbar>

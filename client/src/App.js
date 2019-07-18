@@ -1,13 +1,12 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
-import ProductContainer from "./pages/ProductContainer";
 import products from "./products.json";
-
 import BootstrapNavbar from "./components/BootstrapNavbar";
 import Footer from "./components/Footer";
-
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import ProductContainer from "./pages/ProductContainer";
 import ProductDetail from "./pages/ProductDetail";
+import Cart from "./pages/Cart";
 
 class App extends Component {
   state = {
@@ -24,6 +23,7 @@ class App extends Component {
           <div className="contentContainer">
             <Route exact path="/" component={ProductContainer} />
             <Route exact path="/product/:id" component={ProductDetail} />
+            <Route exact path="/cart" component={Cart} />
           </div>
 
           <Footer />
