@@ -5,7 +5,7 @@ import products from "./products.json";
 
 import BootstrapNavbar from "./components/BootstrapNavbar";
 import Footer from "./components/Footer";
-import "./App.css";
+
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import ProductDetail from "./pages/ProductDetail";
 
@@ -21,7 +21,7 @@ class App extends Component {
         <BootstrapNavbar />
 
         <Router>
-          <div>
+          <div className="contentContainer">
             <Route exact path="/" component={ProductContainer} />
             <Route exact path="/product/:id" component={ProductDetail} />
           </div>
