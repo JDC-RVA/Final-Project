@@ -16,9 +16,9 @@ const ProductInfoBootstrap = props => {
       {/* <Card> */}
       {/* <CardHeader tag="h3"> {props.name}</CardHeader> */}
 
-      <div className="img-container">
+      {/* <div className="img-container">
         <img alt={props.name} src={props.image[0]} />
-      </div>
+      </div> */}
       <CardBody body inverse color="primary">
         <CardTitle tag="h3">{props.name}</CardTitle>
         <CardText>$ {props.price}</CardText>

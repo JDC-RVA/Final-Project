@@ -6,26 +6,10 @@ import {
   CarouselIndicators
 } from "reactstrap";
 
-// import "./style.css";
-const items = [
-  {
-    src: "/img/revmart-main.png",
-    altText: "Slide 1"
-  },
-  {
-    src: "/img/revmart-description.png",
-    altText: "Slide 2"
-  },
-  {
-    src: "/img/discount.png",
-    altText: "Slide 3"
-  }
-];
-
 class ProductCarousel extends Component {
   constructor(props) {
     super(props);
-    this.state = { activeIndex: 0 };
+    this.state = { activeIndex: 0, items: [] };
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
     this.goToIndex = this.goToIndex.bind(this);
@@ -44,7 +28,7 @@ class ProductCarousel extends Component {
   next() {
     if (this.animating) return;
     const nextIndex =
-      this.state.activeIndex === items.length - 1
+      this.state.activeIndex === this.state.items.length - 1
         ? 0
         : this.state.activeIndex + 1;
     this.setState({ activeIndex: nextIndex });
@@ -54,7 +38,7 @@ class ProductCarousel extends Component {
     if (this.animating) return;
     const nextIndex =
       this.state.activeIndex === 0
-        ? items.length - 1
+        ? this.state.items.length - 1
         : this.state.activeIndex - 1;
     this.setState({ activeIndex: nextIndex });
   }
@@ -64,10 +48,18 @@ class ProductCarousel extends Component {
     this.setState({ activeIndex: newIndex });
   }
 
+  componentDidMount() {
+    console.log(this.props);
+    let carouselItems = this.props.image.map((image, i) => {
+      return { src: image, altText: "Slide " + (i + 1) };
+    });
+    this.setState({ items: carouselItems });
+  }
+
   render() {
     const { activeIndex } = this.state;
 
-    const slides = items.map(item => {
+    const slides = this.state.items.map(item => {
       return (
         <CarouselItem
           onExiting={this.onExiting}
@@ -86,7 +78,7 @@ class ProductCarousel extends Component {
         previous={this.previous}
       >
         <CarouselIndicators
-          items={items}
+          items={this.state.items}
           activeIndex={activeIndex}
           onClickHandler={this.goToIndex}
         />

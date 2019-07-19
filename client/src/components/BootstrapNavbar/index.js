@@ -20,7 +20,7 @@ export default class BootstrapNavbar extends React.Component {
     this.toggle = this.toggle.bind(this);
     this.state = {
       isOpen: false,
-      userName: []
+      userName: ""
     };
   }
   toggle() {
@@ -29,16 +29,17 @@ export default class BootstrapNavbar extends React.Component {
     });
   }
 
-  componentWillMount() {
-    localStorage.getItem("username") &&
-      this.setState({
-        userName: JSON.parse(localStorage.getItem("username")),
-        isLoading: false
-      });
+  componentDidMount() {
+    this.updateNav();
   }
-  componentWillUpdate(nextProps, nextState) {
-    localStorage.setItem("username", JSON.stringify(nextState.userName));
-  }
+
+  updateNav = () => {
+    console.log("update");
+    this.setState({
+      userName: localStorage.getItem("username"),
+      isLoading: false
+    });
+  };
 
   render() {
     return (
@@ -54,14 +55,14 @@ export default class BootstrapNavbar extends React.Component {
                 {this.state.userName ? (
                   <Welcome userName={this.state.userName} />
                 ) : (
-                  <Modal />
+                  <Modal updateName={this.updateNav} />
                 )}
               </NavItem>
-              <Router>
-                <Link to={"/cart"}>
-                  <i className="fas fa-shopping-cart fa-2x" id="cart" />
-                </Link>
-              </Router>
+              {/* <Router> */}
+              <Link to={"/cart"}>
+                <i className="fas fa-shopping-cart fa-2x" id="cart" />
+              </Link>
+              {/* </Router> */}
             </Nav>
           </Collapse>
         </Navbar>

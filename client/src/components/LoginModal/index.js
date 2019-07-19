@@ -42,22 +42,57 @@ class LoginModal extends Component {
     });
   };
 
-  loadUsers = () => {
-    API.getUsers()
-      .then(res =>
-        this.setState({ users: res.data, userName: "", password: "" })
-      )
-      .catch(err => console.log(err));
-  };
+  // loadUsers = () => {
+  //   API.getUsers()
+  //     .then(res =>
+  //       this.setState({ users: res.data, userName: "", password: "" })
+  //     )
+  //     .catch(err => console.log(err));
+  // };
 
-  handleFormSubmit = event => {
+  handleRegister = event => {
     event.preventDefault();
     if (this.state.userName && this.state.password) {
+      localStorage.setItem("username", this.state.userName);
+      // window.location.reload();
       API.saveUser({
         userName: this.state.userName,
         password: this.state.password
       })
-        .then(res => this.loadUsers())
+        .then(res => {
+          this.setState({ modalIsOpen: false });
+          this.props.updateName();
+        })
+        .catch(err => console.log(err));
+    }
+  };
+
+  handleLogin = event => {
+    event.preventDefault();
+    console.log("login");
+    if (this.state.userName && this.state.password) {
+      API.getUsers()
+        .then(res => {
+          console.log(res);
+          // filter the results from API.GetUsers method
+          let matched = res.data.filter(user => {
+            // checking to see if userName and password matches
+            let isUserName = user.userName == this.state.userName;
+            let isPassword = user.password == this.state.password;
+            // if both are true, then this user will pushed into the matched array
+            return isUserName && isPassword;
+          });
+          console.log(matched);
+          // checked to see if the matched array is greated than 0
+          if (matched.length > 0) {
+            // if there are any matches, set userName to local storage
+            localStorage.setItem("username", this.state.userName);
+            // calling the updateName method from the parent component, which was pass as a prop from the bootstrapNavbar
+            this.props.updateName();
+            // closing the modal
+            this.setState({ modalIsOpen: false });
+          }
+        })
         .catch(err => console.log(err));
     }
   };
@@ -97,6 +132,7 @@ class LoginModal extends Component {
                       name="userName"
                       id="exampleEmail"
                       placeholder="Username"
+                      onChange={this.handleInputChange}
                     />
                   </FormGroup>
                 </Col>
@@ -108,6 +144,7 @@ class LoginModal extends Component {
                       name="password"
                       id="examplePassword"
                       placeholder="Password"
+                      onChange={this.handleInputChange}
                     />
                   </FormGroup>
                 </Col>
@@ -116,6 +153,7 @@ class LoginModal extends Component {
               <Button
                 className="form-control mt-2 btn btn-primary"
                 color="primary"
+                onClick={this.handleLogin}
               >
                 Sign In
               </Button>
@@ -127,7 +165,7 @@ class LoginModal extends Component {
                   <FormGroup>
                     <Label for="exampleEmail">Username</Label>
                     <Input
-                      value={this.state.userName}
+                      // value={this.state.userName}
                       onChange={this.handleInputChange}
                       type="email"
                       name="userName"
@@ -139,7 +177,7 @@ class LoginModal extends Component {
                   <FormGroup>
                     <Label for="examplePassword">Password</Label>
                     <Input
-                      value={this.state.password}
+                      // value={this.state.password}
                       onChange={this.handleInputChange}
                       type="password"
                       name="password"
@@ -151,9 +189,10 @@ class LoginModal extends Component {
 
               <Button
                 disabled={!(this.state.userName && this.state.password)}
-                onClick={this.handleFormSubmit}
-                className="form-control mt-2 btn btn-primary"
+                onClick={this.handleRegister}
+                className="form-control mt-2 btn btn-primary hide-modal"
                 color="success"
+                toggle={this.toggleModal.bind(this)}
               >
                 Register
               </Button>
