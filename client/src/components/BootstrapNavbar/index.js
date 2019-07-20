@@ -34,7 +34,7 @@ export default class BootstrapNavbar extends React.Component {
   }
 
   updateNav = () => {
-    console.log("update");
+    // console.log("update");
     this.setState({
       userName: localStorage.getItem("username"),
       isLoading: false

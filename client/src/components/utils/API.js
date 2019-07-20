@@ -16,5 +16,9 @@ export default {
   // Saves a user to the database
   saveUser: function(userData) {
     return axios.post("/api/users", userData);
+  },
+  // Saves items to cart model
+  createCart: function(cartData) {
+    return axios.post("/api/cart/", cartData);
   }
 };

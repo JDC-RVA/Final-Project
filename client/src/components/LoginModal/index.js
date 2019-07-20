@@ -77,8 +77,8 @@ class LoginModal extends Component {
           // filter the results from API.GetUsers method
           let matched = res.data.filter(user => {
             // checking to see if userName and password matches
-            let isUserName = user.userName == this.state.userName;
-            let isPassword = user.password == this.state.password;
+            let isUserName = user.userName === this.state.userName;
+            let isPassword = user.password === this.state.password;
             // if both are true, then this user will pushed into the matched array
             return isUserName && isPassword;
           });
