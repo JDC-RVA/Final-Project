@@ -27,5 +27,23 @@ module.exports = {
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+  addToCart: function(req, res) {
+    db.Cart.create(req.body)
+      .then(function(dbCart) {
+        return db.User.findOneAndUpdate(
+          { _id: req.params.id },
+          { cart: dbCart._id },
+          { new: true }
+        );
+      })
+      .then(function(dbUser) {
+        // If we were able to successfully update an User, send it back to the client
+        res.json(dbUser);
+      })
+      .catch(function(err) {
+        // If an error occurred, send it to the client
+        res.json(err);
+      });
   }
 };

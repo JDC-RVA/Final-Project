@@ -1,4 +1,5 @@
 import React from "react";
+import API from "../utils/API";
 
 import {
   Card,
@@ -11,6 +12,17 @@ import {
 } from "reactstrap";
 
 const ProductInfoBootstrap = props => {
+  const handleAddToCart = (name, image, description, price) => {
+    API.saveUser({
+      name,
+      image,
+      description,
+      price
+    })
+      .then(res => {})
+      .catch(err => console.log(err));
+  };
+
   return (
     <div>
       {/* <Card> */}
@@ -23,7 +35,19 @@ const ProductInfoBootstrap = props => {
         <CardTitle tag="h3">{props.name}</CardTitle>
         <CardText>$ {props.price}</CardText>
         <CardText>{props.description}</CardText>
-        <Button color="success">ADD TO CART</Button>
+        <Button
+          color="success"
+          onClick={() =>
+            handleAddToCart(
+              props.name,
+              props.image,
+              props.description,
+              props.price
+            )
+          }
+        >
+          ADD TO CART
+        </Button>
       </CardBody>
 
       {/* </Card> */}

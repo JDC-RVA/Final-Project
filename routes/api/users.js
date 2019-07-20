@@ -12,6 +12,7 @@ router
   .route("/:id")
   .get(usersController.findById)
   .put(usersController.update)
-  .delete(usersController.remove);
+  .delete(usersController.remove)
+  .post(usersController.addToCart);
 
 module.exports = router;

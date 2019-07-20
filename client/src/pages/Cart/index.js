@@ -34,10 +34,9 @@ class Cart extends Component {
             {" "}
             <Card body className="text-center">
               <CardTitle id="cardTitle">Order Summary</CardTitle>
-              <CardText>
-                With supporting text below as a natural lead-in to additional
-                content.
-              </CardText>
+              <CardText>Subtotal:</CardText>
+              <CardText>Tax:</CardText>
+              <CardText>Total:</CardText>
               <Button>CHECKOUT</Button>
             </Card>
           </Col>
