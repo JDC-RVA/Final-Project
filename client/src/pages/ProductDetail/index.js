@@ -28,15 +28,6 @@ class ProductDetail extends Component {
           description={product.description}
           price={product.price}
         />
-        {/* <ProductInfo
-          id={product.id}
-          key={product.id}
-          name={product.name}
-          image={product.image}
-          description={product.description}
-          price={product.price}
-        /> */}
-        {/* <YoutubeHTTP /> */}
         <YoutubeNode name={product.name} key={product.id} />
       </div>
     );

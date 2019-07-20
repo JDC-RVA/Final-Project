@@ -24,13 +24,6 @@ class Cart extends Component {
         <Row>
           <Col xs="6">
             <CartContent />
-            {/* {" "}
-            <ListGroup>
-              <ListGroupItem>
-                Cras justo odio
-                <i class="fas fa-trash-alt fa-1x float-right" />
-              </ListGroupItem>
-            </ListGroup> */}
           </Col>
           <Col xs="6">
             {" "}
