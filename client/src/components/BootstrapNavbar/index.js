@@ -44,7 +44,7 @@ export default class BootstrapNavbar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
+        <Navbar color="light" light expand="md" sticky="top">
           <NavbarBrand href="/">
             <img alt="logo" src="/img/revmart-logo_transparent.png" />
           </NavbarBrand>

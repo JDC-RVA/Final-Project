@@ -3,6 +3,15 @@ import { Table } from "reactstrap";
 
 export default class CardContent extends React.Component {
   render() {
+    let rows = this.props.products.map((product, index) => {
+      return (
+        <tr>
+          <th scope="row">{index + 1}</th>
+          <td>{product.name}</td>
+          <td>{product.price}</td>
+        </tr>
+      );
+    });
     return (
       <Table>
         <thead>
@@ -12,13 +21,7 @@ export default class CardContent extends React.Component {
             <th>Price</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>@mdo</td>
-          </tr>
-        </tbody>
+        <tbody>{rows}</tbody>
       </Table>
     );
   }

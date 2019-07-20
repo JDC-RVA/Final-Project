@@ -5,7 +5,7 @@ import { Button, CardBody, CardTitle, CardText } from "reactstrap";
 
 const ProductInfoBootstrap = props => {
   const handleAddToCart = (name, image, description, price) => {
-    API.createCart({
+    API.createCart(localStorage.getItem("userID"), {
       name,
       image,
       description,

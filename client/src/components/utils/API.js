@@ -18,7 +18,10 @@ export default {
     return axios.post("/api/users", userData);
   },
   // Saves items to cart model
-  createCart: function(cartData) {
-    return axios.post("/api/cart/", cartData);
+  createCart: function(id, cartData) {
+    return axios.post("/api/users/" + id, cartData);
+  },
+  getCart: function(id) {
+    return axios.get("/api/users/cart/" + id);
   }
 };

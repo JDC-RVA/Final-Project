@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import products from "./products.json";
 import BootstrapNavbar from "./components/BootstrapNavbar";
@@ -19,13 +19,13 @@ class App extends Component {
       <div>
         <Router>
           <BootstrapNavbar />
-
-          <div className="contentContainer">
+          <Switch>
+            {/* <div className="contentContainer"> */}
             <Route exact path="/" component={ProductContainer} />
             <Route exact path="/product/:id" component={ProductDetail} />
             <Route exact path="/cart" component={Cart} />
-          </div>
-
+            {/* </div> */}
+          </Switch>
           <Footer />
         </Router>
       </div>

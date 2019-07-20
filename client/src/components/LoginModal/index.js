@@ -22,7 +22,8 @@ class LoginModal extends Component {
     visible: true,
     modalIsOpen: false,
     userName: "",
-    password: ""
+    password: "",
+    userID: ""
   };
   toggleAlert() {
     this.setState({
@@ -54,12 +55,14 @@ class LoginModal extends Component {
     event.preventDefault();
     if (this.state.userName && this.state.password) {
       localStorage.setItem("username", this.state.userName);
+
       // window.location.reload();
       API.saveUser({
         userName: this.state.userName,
         password: this.state.password
       })
         .then(res => {
+          localStorage.setItem("userID", res.data._id);
           this.setState({ modalIsOpen: false });
           this.props.updateName();
         })
@@ -87,6 +90,7 @@ class LoginModal extends Component {
           if (matched.length > 0) {
             // if there are any matches, set userName to local storage
             localStorage.setItem("username", this.state.userName);
+            localStorage.setItem("userID", matched[0]._id);
             // calling the updateName method from the parent component, which was pass as a prop from the bootstrapNavbar
             this.props.updateName();
             // closing the modal
