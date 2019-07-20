@@ -1,15 +1,7 @@
 import React from "react";
 import API from "../utils/API";
 
-import {
-  Card,
-  Button,
-  CardHeader,
-  CardFooter,
-  CardBody,
-  CardTitle,
-  CardText
-} from "reactstrap";
+import { Button, CardBody, CardTitle, CardText } from "reactstrap";
 
 const ProductInfoBootstrap = props => {
   const handleAddToCart = (name, image, description, price) => {
