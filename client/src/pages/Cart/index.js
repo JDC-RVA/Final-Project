@@ -27,11 +27,13 @@ class Cart extends Component {
       .then(res => {
         let prices = res.data.map(item => item.price);
         let subTotal = prices.reduce((total, price) => {
-          let sum = parseInt(total) + parseInt(price);
+          let sum = parseFloat(total) + parseFloat(price);
           return sum.toFixed(2);
-        });
+        }, 0);
         let calculatedTax = (subTotal * 0.053).toFixed(2);
-        let total = parseInt(subTotal) + parseInt(calculatedTax);
+        let total = (parseFloat(subTotal) + parseFloat(calculatedTax)).toFixed(
+          2
+        );
         this.setState({
           products: res.data,
           subtotal: subTotal,
@@ -55,9 +57,9 @@ class Cart extends Component {
             {" "}
             <Card body className="text-center">
               <CardTitle id="cardTitle">Order Summary</CardTitle>
-              <CardText>Subtotal: {this.state.subtotal}</CardText>
-              <CardText>Tax: {this.state.tax}</CardText>
-              <CardText>Total: {this.state.total}</CardText>
+              <CardText>Subtotal: $ {this.state.subtotal}</CardText>
+              <CardText>Tax (5.3%): $ {this.state.tax}</CardText>
+              <CardText>Total: $ {this.state.total}</CardText>
               <Button>CHECKOUT</Button>
             </Card>
           </Col>
