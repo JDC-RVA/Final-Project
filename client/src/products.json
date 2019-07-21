@@ -64,5 +64,16 @@
         ],
         "description": "Cole Haan has been synonymous with quality, craftsmanship and style since its founding in 1928. Frequent collaborations with prominent designers, athletes and tastemakers—contemporary collections showcase CFDA-nominated menswear designer Todd Snyder and a trio of ballerinas from the New York City Ballet—keep Cole Haan at the forefront of innovation and excellence.",
         "price": 129.99
+    },
+    {
+        "id": 7,
+        "name": "Wilson Evolution Indoor Game Basketball",
+        "image": [
+            "/img/ball1.png",
+            "/img/ball2.png",
+            "/img/ball3.png"
+        ],
+        "description": "Evolve your game with one of the most popular high school game balls in the country, the Wilson Evolution Indoor Game Basketball. Developed with a microfiber composite leather cover, the Evolution Wilson basketball features laid-in channels that enhance gripability. A cushion core carcass gives every player exceptional feel. This product remains taut after lots of play, giving you the right amount of bounce for dribbling, passing or making backboard shots. This ball is designed to hold up to play after play, offering consistent performance for multiple games. It's approved by multiple athletic organizations for use in official games. It's part of a larger line from Wilson that includes uniforms and other gear to outfit your team.",
+        "price": 129.99
     }
 ]

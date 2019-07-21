@@ -20,11 +20,11 @@ class App extends Component {
         <Router>
           <BootstrapNavbar />
           <Switch>
-            {/* <div className="contentContainer"> */}
-            <Route exact path="/" component={ProductContainer} />
-            <Route exact path="/product/:id" component={ProductDetail} />
-            <Route exact path="/cart" component={Cart} />
-            {/* </div> */}
+            <div className="contentContainer">
+              <Route exact path="/" component={ProductContainer} />
+              <Route exact path="/product/:id" component={ProductDetail} />
+              <Route exact path="/cart" component={Cart} />
+            </div>
           </Switch>
           <Footer />
         </Router>
