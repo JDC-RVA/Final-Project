@@ -3,7 +3,7 @@ import "./style.css";
 import React, { Component } from "react";
 // import ReactDOM from "react-dom";
 import YTSearch from "youtube-api-search";
-import _ from "lodash";
+// import _ from "lodash";
 // import SearchBar from "../SearchBar";
 import VideoList from "../VideoList";
 import VideoDetail from "../VideoDetail";
@@ -32,9 +32,9 @@ class YoutubeNode extends Component {
   }
 
   render() {
-    const throttledSearch = _.debounce(term => {
-      this.videoSearch(term);
-    }, 300);
+    // const throttledSearch = _.debounce(term => {
+    //   this.videoSearch(term);
+    // }, 300);
     return (
       <div className="container-fluid">
         {/* <SearchBar onSearchTermChange={throttledSearch} /> */}

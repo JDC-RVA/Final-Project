@@ -15,4 +15,6 @@ router
   .delete(usersController.remove)
   .post(usersController.addToCart);
 
+router.route("/cart/:id").get(usersController.findProducts);
+
 module.exports = router;

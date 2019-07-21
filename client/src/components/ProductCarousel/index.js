@@ -49,7 +49,7 @@ class ProductCarousel extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props);
+    // console.log(this.props);
     let carouselItems = this.props.image.map((image, i) => {
       return { src: image, altText: "Slide " + (i + 1) };
     });
