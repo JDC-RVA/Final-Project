@@ -71,7 +71,7 @@ class LoginModal extends Component {
   };
 
   handleLogin = event => {
-    event.preventDefault();
+    // event.preventDefault();
     console.log("login");
     if (this.state.userName && this.state.password) {
       API.getUsers()
@@ -101,6 +101,13 @@ class LoginModal extends Component {
     }
   };
 
+  enterPressed(event) {
+    var code = event.keyCode || event.which;
+    if (code === 13) {
+      this.handleLogin();
+    }
+  }
+
   render() {
     return (
       <Container>
@@ -111,6 +118,7 @@ class LoginModal extends Component {
         >
           Login/Register
         </NavLink>
+
         <Modal isOpen={this.state.modalIsOpen}>
           <ModalHeader toggle={this.toggleModal.bind(this)}>
             <div>
@@ -149,6 +157,7 @@ class LoginModal extends Component {
                       id="examplePassword"
                       placeholder="Password"
                       onChange={this.handleInputChange}
+                      onKeyPress={this.enterPressed.bind(this)}
                     />
                   </FormGroup>
                 </Col>
@@ -186,6 +195,7 @@ class LoginModal extends Component {
                       type="password"
                       name="password"
                       placeholder="Password"
+                      onKeyPress={this.enterPressed.bind(this)}
                     />
                   </FormGroup>
                 </Col>

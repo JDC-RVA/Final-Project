@@ -6,7 +6,9 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem
+  NavItem,
+  NavLink,
+  Row
 } from "reactstrap";
 import Modal from "../LoginModal";
 import Welcome from "../Welcome";
@@ -53,16 +55,25 @@ export default class BootstrapNavbar extends React.Component {
             <Nav className="ml-auto" navbar>
               <NavItem>
                 {this.state.userName ? (
-                  <Welcome userName={this.state.userName} />
+                  [
+                    <Row>
+                      <Welcome userName={this.state.userName} />
+                      <Link to={"/cart"}>
+                        <img src="/img/cart2.png" id="cart" alt-text="cart" />
+                      </Link>
+                      <NavLink
+                        color="secondary"
+                        href="#"
+                        onClick={() => localStorage.clear()}
+                      >
+                        Log Out <i class="fas fa-sign-out-alt" />
+                      </NavLink>
+                    </Row>
+                  ]
                 ) : (
                   <Modal updateName={this.updateNav} />
                 )}
               </NavItem>
-              {/* <Router> */}
-              <Link to={"/cart"}>
-                <i className="fas fa-shopping-cart fa-2x" id="cart" />
-              </Link>
-              {/* </Router> */}
             </Nav>
           </Collapse>
         </Navbar>
