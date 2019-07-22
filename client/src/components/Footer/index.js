@@ -54,6 +54,19 @@ export default function Footer() {
         <img id="footer" alt="logo" src="/img/revmart-logo_transparent.png" />
         <img id="footer" alt="logo" src="/img/revmart-logo_transparent.png" />
         <img id="footer" alt="logo" src="/img/revmart-logo_transparent.png" />
+        <img id="footer" alt="logo" src="/img/revmart-logo_transparent.png" />
+        <img id="footer" alt="logo" src="/img/revmart-logo_transparent.png" />
+        <img id="footer" alt="logo" src="/img/revmart-logo_transparent.png" />
+        <img id="footer" alt="logo" src="/img/revmart-logo_transparent.png" />
+        <img id="footer" alt="logo" src="/img/revmart-logo_transparent.png" />
+        <img id="footer" alt="logo" src="/img/revmart-logo_transparent.png" />
+        <img id="footer" alt="logo" src="/img/revmart-logo_transparent.png" />
+        <img id="footer" alt="logo" src="/img/revmart-logo_transparent.png" />
+        <img id="footer" alt="logo" src="/img/revmart-logo_transparent.png" />
+        <img id="footer" alt="logo" src="/img/revmart-logo_transparent.png" />
+        <img id="footer" alt="logo" src="/img/revmart-logo_transparent.png" />
+        <img id="footer" alt="logo" src="/img/revmart-logo_transparent.png" />
+        <img id="footer" alt="logo" src="/img/revmart-logo_transparent.png" />
 
         {/* </Typography> */}
         {/* </Container> */}
