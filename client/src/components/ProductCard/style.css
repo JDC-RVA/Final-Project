@@ -48,3 +48,7 @@
 .card > .remove:hover {
   color: #d50000;
 }
+
+#productCard {
+  border-radius: 25px !important;
+}

@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 function ProductCard(props) {
   return (
     <Link to={`/product/${props.id}`}>
-      <div className="card">
+      <div className="card" id="productCard">
         <div className="img-container">
           <img alt={props.name} src={props.image[0]} />
         </div>
