@@ -74,6 +74,17 @@
             "/img/ball3.png"
         ],
         "description": "Evolve your game with one of the most popular high school game balls in the country, the Wilson Evolution Indoor Game Basketball. Developed with a microfiber composite leather cover, the Evolution Wilson basketball features laid-in channels that enhance gripability. A cushion core carcass gives every player exceptional feel. This product remains taut after lots of play, giving you the right amount of bounce for dribbling, passing or making backboard shots. This ball is designed to hold up to play after play, offering consistent performance for multiple games. It's approved by multiple athletic organizations for use in official games. It's part of a larger line from Wilson that includes uniforms and other gear to outfit your team.",
-        "price": 129.99
+        "price": 59.99
+    },
+    {
+        "id": 8,
+        "name": "NIKE METCON 3",
+        "image": [
+            "/img/metcon1.png",
+            "/img/metcon2.png",
+            "/img/metcon3.png"
+        ],
+        "description": "The fully updated Nike Metcon 3 Men's Training Shoe is ready for your most demanding workouts—from wall exercises and rope climbs to sprinting and lifting. An updated drop-in midsole is softer and more flexible in the forefoot—providing the versatility you need for running and cardio drills. A flat platform and a firm-rubber heel give you the powerful stability you need for explosive lifting. With embroidered reinforcement in high-wear areas, the Metcon 3 is tough enough for intense training and light enough to help you stay fast on your feet.",
+        "price": 99.99
     }
 ]
