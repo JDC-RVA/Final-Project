@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./style.css";
 import {
   // ListGroup,
@@ -60,6 +61,9 @@ class Cart extends Component {
               <CardText>Subtotal: $ {this.state.subtotal}</CardText>
               <CardText>Tax (5.3%): $ {this.state.tax}</CardText>
               <CardText>Total: $ {this.state.total}</CardText>
+              <Link to="/">
+                <Button>CONTINUE SHOPPING</Button>
+              </Link>
               <Button>CHECKOUT</Button>
             </Card>
           </Col>
