@@ -23,3 +23,13 @@ body {
     padding-top: 95px;
   }
 }
+
+@media (min-width: 2575px) {
+  .contentContainer {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+  body {
+    padding-top: 135px;
+  }
+}
