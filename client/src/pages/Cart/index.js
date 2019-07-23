@@ -25,6 +25,10 @@ class Cart extends Component {
     total: 0
   };
   componentDidMount() {
+    this.loadCart();
+  }
+
+  loadCart() {
     API.getCart(localStorage.getItem("userID"))
       .then(res => {
         let prices = res.data.map(item => item.price);
@@ -45,15 +49,16 @@ class Cart extends Component {
       })
       .catch(err => console.log(err));
   }
+
   render() {
-    // let product = products.find(
-    //   eachProduct => eachProduct.id.toString() === this.props.match.params.id
-    // );
     return (
       <Container>
         <Row>
           <Col xs="6">
-            <CartContent products={this.state.products} />
+            <CartContent
+              products={this.state.products}
+              loadCart={this.loadCart.bind(this)}
+            />
           </Col>
           <Col xs="6">
             {" "}

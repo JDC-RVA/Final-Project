@@ -49,26 +49,18 @@ module.exports = {
       });
   },
   findProducts: function(req, res) {
-    console.log("Hello");
     db.User.findById(req.params.id)
       .then(dbModel => {
-        console.log("Hi");
         db.Cart.find()
           .then(carts => {
             let userCarts = dbModel.carts;
-            console.log(userCarts);
             let productDetails = carts
               //  filtering to get carts that belongs to this user
               .filter(cart => userCarts.includes(cart._id))
               //  getting only the name and the price of the cart
               .map(cart => {
-                return { name: cart.name, price: cart.price };
+                return { name: cart.name, price: cart.price, id: cart._id };
               });
-            // console.log("-----------------------------");
-            // console.log(carts);
-            // carts.filter(item => {
-            //   console.log(item.name);
-            // });
             res.json(productDetails);
           })
           .catch(err => {

@@ -10,8 +10,8 @@ export default {
     return axios.get("/api/users/" + id);
   },
   // Deletes the user with the given id
-  deleteUser: function(id) {
-    return axios.delete("/api/users/" + id);
+  deleteProduct: function(id) {
+    return axios.delete("/api/cart/" + id);
   },
   // Saves a user to the database
   saveUser: function(userData) {

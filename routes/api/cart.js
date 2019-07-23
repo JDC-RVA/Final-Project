@@ -7,12 +7,11 @@ router
   .get(cartController.findAll)
   .post(cartController.create);
 
-// Matches with "/api/users/:id"
-// router
-//   .route("/:id")
-//   .get(usersController.findById)
-//   .put(usersController.update)
-//   .delete(usersController.remove)
-//   .post(usersController.addToCart);
+// Matches with "/api/cart/:id"
+router
+  .route("/:id")
+  .get(cartController.findById)
+  .put(cartController.update)
+  .delete(cartController.remove);
 
 module.exports = router;
