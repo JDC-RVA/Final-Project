@@ -3,7 +3,7 @@ import API from "../utils/API";
 import "./style.css";
 // eslint-disable-next-line
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Button, CardBody, CardTitle, CardText } from "reactstrap";
+import { CardBody, CardTitle, CardText } from "reactstrap";
 import AddedToCartModal from "../../components/AddedToCartModal";
 
 const ProductInfoBootstrap = props => {

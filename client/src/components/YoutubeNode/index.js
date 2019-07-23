@@ -8,7 +8,8 @@ import SearchBar from "../SearchBar";
 import VideoList from "../VideoList";
 import VideoDetail from "../VideoDetail";
 
-const API_KEY = "AIzaSyDMXeW-EZcWG-cErEeb0L2YingWCgBHAos";
+// const API_KEY = "AIzaSyDMXeW-EZcWG-cErEeb0L2YingWCgBHAos";
+const API_KEY = "AIzaSyCMT6iHmJcHfk5zNPClQBh103hAdFVlCAA";
 
 // Component class
 class YoutubeNode extends Component {
