@@ -1,9 +1,12 @@
 import React from "react";
+import "./style.css";
 
 function Welcome(props) {
   return (
     <div className="text-center">
-      <p color="secondary">Welcome {props.userName}!</p>
+      <p id="welcome" color="secondary">
+        Welcome {props.userName}!
+      </p>
     </div>
   );
 }
