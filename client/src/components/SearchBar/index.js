@@ -8,7 +8,7 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="row py-3 shadow-sm">
+      <div className="row py-3 ">
         <div className="col-sm-9 mx-auto">
           <div className="input-group search-bar">
             <input
