@@ -17,14 +17,14 @@ class ProductDetail extends Component {
       <div>
         <Container>
           <Row>
-            <Col xs="8">
+            <Col md="8">
               <ProductCarousel
                 id={product.id}
                 key={"Carousel_" + product.id}
                 image={product.image}
               />
             </Col>
-            <Col xs="4">
+            <Col md="4">
               <ProductInfoBootstrap
                 id={product.id}
                 key={"Product_" + product.id}

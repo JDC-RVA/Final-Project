@@ -15,11 +15,11 @@ const items = [
   {
     src: "/img/revmart-description.png",
     altText: "Slide 2"
-  },
+  } /*,
   {
     src: "/img/discount.png",
     altText: "Slide 3"
-  }
+  }*/
 ];
 
 class Banner extends Component {
