@@ -13,7 +13,7 @@ const items = [
     altText: "Slide 1"
   },
   {
-    src: "/img/revmart-description.png",
+    src: "/img/revmart-description2.png",
     altText: "Slide 2"
   } /*,
   {
